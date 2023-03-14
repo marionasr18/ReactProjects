@@ -16,6 +16,9 @@ export default function CardList() {
     const handleAdd = () => {
         nav('/profile/add', { state: { id: 0, name: '', imgUrl: '', comment: 0, desc: '', nbOfLike: 0, nbofShares: 0, date: new Date(), add: true } })
     }
+    const handleAddSport = () => {
+        nav('/profile/view', { state: { id: 0, name: '', imgUrl: '', comment: 0, desc: '', nbOfLike: 0, nbofShares: 0, date: new Date(), add: true } })
+    }
     const getData = useCallback(async () => {
 
         setIsLoading(prv => prv + 1)
@@ -50,6 +53,8 @@ export default function CardList() {
         }), [cards])
     return (
         <div className="container">
+            <div  className="row">
+                <div className="col-6">  <button onClick={handleAddSport}>Add Sport<i className="add icon"></i></button> </div> </div>
             <div className="row">
                 <div className="col-10">
                     <button onClick={handleAdd}>Add Player<i className="add icon"></i></button></div>

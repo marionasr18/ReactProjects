@@ -56,8 +56,9 @@ export default function SignUp() {
         }, [obj.username])
     return (
         <form className="ui form" id='cont' >
+
             <div className="field">
-                <label>First Name</label>
+                <label>User Name</label>
                 <input type="text" name="first-name" value={obj.username} onChange={handleUname} />
             </div>
             <div className="field">
